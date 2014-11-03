@@ -36,5 +36,5 @@ script:
   - ls -alF doc
   
   - cd ./OPTIweb/test
-  - cp OPTIwebprof.html /tmp/OPTIweb.html
+  - cp ../OPTIweb.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
