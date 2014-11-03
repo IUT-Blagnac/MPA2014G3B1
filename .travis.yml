@@ -9,14 +9,14 @@ script:
   - cd sprint_5
   - echo COMPILATION des executables
   - javac -cp .:./tools/junit.jar:./bin/ -d ./bin/ ./scr/*.java
-  - echo COMPILATION des modèles
+  - echo COMPILATION des modeles
   - javac -cp .:./bin/ -d ./bin/ ./src/model/*.java
   - echo EXECUTION des tests
   - cd ./bin/
-  - java -cp .:../tools/junit.jar LibCSVTest
-  - java -cp .:../tools/junit.jar MakeOPTIwebTest
+  - java -cp .:./bin:../tools/junit.jar LibCSVTest
+  - java -cp .:./bin:../tools/junit.jar MakeOPTIwebTest
   - cd ..
-  - COMPILATION des diagrammes de classes
+  - echo COMPILATION des diagrammes de classes
   - java -jar ./tools/plantuml.jar -o images ./srcdoc/default.puml
   - java -jar ./tools/plantuml.jar -o images ./srcdoc/model.puml
   - ls -alF srcdoc/images
