@@ -7,19 +7,20 @@ script:
   - echo Hello from DUT INFO Blagnac
   - ls -alF
   - cd sprint_5
-  - javac -cp .:./bin -d ./bin ./src/HelloMonde.java
   - echo COMPILATION des executables
-  - javac -cp .;./tools/junit.jar;./bin/ -d ./bin/ ./scr/*.java
+  - javac -cp .:./tools/junit.jar:./bin/ -d ./bin/ ./scr/*.java
   - echo COMPILATION des modèles
-  - javac -cp .;./bin/ -d ./bin/ ./src/model/*.java
+  - javac -cp .:./bin/ -d ./bin/ ./src/model/*.java
   - echo EXECUTION des tests
   - cd ./bin/
-  - java -cp .;../tools/junit.jar LibCSVTest
-  - java -cp .;../tools/junit.jar MakeOPTIwebTest
+  - java -cp .:../tools/junit.jar LibCSVTest
+  - java -cp .:../tools/junit.jar MakeOPTIwebTest
   - cd ..
   - COMPILATION des diagrammes de classes
   - java -jar ./tools/plantuml.jar -o images ./srcdoc/default.puml
   - java -jar ./tools/plantuml.jar -o images ./srcdoc/model.puml
+  - ls -alF srcdoc/images
   - echo COMPILATION des documentations
   - python ./tools/asciidoc-8.6.9/asciidoc.py -a iconsdir=../tools/asciidoc-8.6.9/images -o ./doc/docUtilisateur.html ./srcdoc/docUtilisateur.txt
   - python ./tools/asciidoc-8.6.9/asciidoc.py -a iconsdir=../tools/asciidoc-8.6.9/images -o ./doc/docTechnique.html ./srcdoc/docTechnique.txt
+  - ls -alF doc
