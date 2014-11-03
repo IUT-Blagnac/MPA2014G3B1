@@ -110,8 +110,6 @@ abstract class Transform {
 		chaine = "" + (new IntervenantHTML()).toString();
 		for(int i = 1; i< ListInter.size(); i++)
 		{
-
-			System.out.println(new IntervenantHTML(ListInter.get(i)).toString());
 			tmp = new IntervenantHTML(ListInter.get(i));
 			chaine = chaine + tmp.toString();
 

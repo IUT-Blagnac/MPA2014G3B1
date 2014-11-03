@@ -11,7 +11,7 @@ public class MakeOPTIweb {
 	 */
 	public static void main(String[] args) throws IOException {
 		// fichier de sortie
-		String path = "./OPTIweb/OPTIweb.html" ;
+		String path = "../OPTIweb/OPTIweb.html" ;
 		File file = new File(path) ;
 		PrintStream printS = new PrintStream(file);
 		String[] debut = {
@@ -21,7 +21,7 @@ public class MakeOPTIweb {
 				"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />" ,
 				"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" ,
 				"<meta name=\"generator\" content=\"OPTIweb VOPTIweb\" />" ,
-				"<title>OPTIweb - V0.1</title>" ,
+				"<title>0.1 - V0.1</title>" ,
 				"<link rel=\"stylesheet\" href=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" />" ,
 				"<link rel=\"stylesheet\" href=\"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css\" />" ,
 				"<script src=\"http://code.jquery.com/jquery-1.9.1.min.js\"></script>" ,
@@ -197,20 +197,20 @@ public class MakeOPTIweb {
 		}
 
 		// écriture des sujets
-		printS.write( Transform.SUJETtoHTML(Transform.CSVtoSujet("./data/sujets2014_2015.csv")).getBytes()) ;
+		printS.write( Transform.SUJETtoHTML(Transform.CSVtoSujet("../data/sujets2014_2015.csv")).getBytes()) ;
 		for (String s : suite1) {
 			printS.write((s + "\n").getBytes()) ;
 		}
 
 		// écriture des étudiants
-		printS.write( Transform.ETUtoHTML(Transform.CSVtoETU("./data/etudiants2014_2015.csv")).getBytes() ) ;
+		printS.write( Transform.ETUtoHTML(Transform.CSVtoETU("../data/etudiants2014_2015.csv")).getBytes() ) ;
 		for (String s : suite2) {
 			printS.write((s + "\n").getBytes()) ;
 		}
 
 
 		// écriture des intervenant et fin
-		printS.write( Transform.INTERtoHTML(Transform.CSVtoSIntervenant("./data/intervenants2014_2015.csv")).getBytes() ) ;
+		printS.write( Transform.INTERtoHTML(Transform.CSVtoSIntervenant("../data/intervenants2014_2015.csv")).getBytes() ) ;
 		for (String s : fin) {
 			printS.write((s + "\n").getBytes()) ;
 		}

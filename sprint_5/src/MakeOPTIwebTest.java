@@ -16,7 +16,7 @@ public class MakeOPTIwebTest extends TestCase {
 	public static void main(String[] args) {
 		if ( args.length > 0 ) { programmeATester = args[0] ; }
 		System.out.println("Tests du programme : " + programmeATester);
-		junit.textui.TestRunner.run(new TestSuite(MakeOPTIweb.class)); 
+		junit.textui.TestRunner.run(new TestSuite(MakeOPTIwebTest.class)); 
 	}
 
 	protected void setUp() throws IOException {  
