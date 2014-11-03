@@ -1,9 +1,16 @@
+before_install:
+  - ...
+before_script:
+  - wget https://github.com/n1k0/casperjs/archive/1.0.3.tar.gz -O /tmp/casper.tar.gz
+  - tar -xvf /tmp/casper.tar.gz
+  - export PATH=$PATH:$PWD/casperjs-1.0.3/bin/
 language: java
 script:
   - java -version
   - javac -version
   - python -V
   - phantomjs -v
+  - casperjs --version
   - echo Hello from DUT INFO Blagnac
   - ls -alF
   - cd sprint_5
@@ -27,3 +34,7 @@ script:
   - python ./tools/asciidoc-8.6.9/asciidoc.py -a iconsdir=../tools/asciidoc-8.6.9/images -o ./doc/docUtilisateur.html ./srcdoc/docUtilisateur.txt
   - python ./tools/asciidoc-8.6.9/asciidoc.py -a iconsdir=../tools/asciidoc-8.6.9/images -o ./doc/docTechnique.html ./srcdoc/docTechnique.txt
   - ls -alF doc
+  
+  - cd ../OPTIweb/test
+  - cp OPTIwebprof.html /tmp/OPTIweb.html
+  - casperjs test casperAccueil.js
