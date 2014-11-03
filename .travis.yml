@@ -14,11 +14,11 @@ script:
   - cd sprint_5
   - echo COMPILATION des executables
   - ls -alF src
-  - javac -cp .:./tools/junit.jar:./bin/ -d ./bin/ ./scr/*.java
+  - javac -cp .:./tools/junit.jar:./bin/ -d ./bin/ ./src/*.java
   - echo COMPILATION des modeles
   - ls -alF src/model
   - javac -cp .:./bin/ -d ./bin/ ./src/model/*.java
-  - echo EXECUTION de l'application
+  - echo EXECUTION de l\'application
   - cd ./bin
   - java -cp .;.. MakeOPTIweb
   - echo EXECUTION des tests
