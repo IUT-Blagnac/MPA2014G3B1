@@ -1,0 +1,60 @@
+﻿= Projet OPTIweb : Documentation SPRINT_4 
+:Author:  Groupe projet 3B1
+:doctitle: Projet OPTIweb : Documentation Technique SPRINT_4
+:slideshowlocation: Your computer
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
+:revnumber: 4
+
+include::docConf.txt[]
+
+== Préambule
+*Université Toulouse 2*
+
+*IUT de Blagnac*
+
+*DUT INFO S3/Module MPA*
+
+*Sprint : 3*
+
+*Membre du groupe :* 
+
+- Alram Camille 
+- Cespedes Quentin 
+- Eychenne Vincent 
+- Ficat Timothée 
+- Ouddane Florian 
+- Vincenot Thomas
+
+== Backlog
+
+include::backlog.txt[]
+
+== Plans de tests fonctionnels
+
+.Tableau de tests des interfaces graphique de l’application
+[width="100%",cols="1,10,10",options="header"]
+|=========================================================
+|Numéro du test |Scénario |Resultat attendu
+
+| 1 | Cliquer sur le fichier make.java | Ceci va générer la page HTML.
+
+|=========================================================
+
+== Fonctionnalités (Niveau technique)
+
+=== Modèles d'analyse et de conception utilisés 
+
+*Default :*
+
+image::default.png[]
+
+*Modèle :*
+
+image::Model.png[]
+
+=== Algorithmes complexes implémentés
+
+*Fonction Lire dans la Librairie CSV:*
+
+On initialise une ArrayList qui sera retourné par la fonction. 
+C’est à l’aide d’un BufferedReader que l’on va pouvoir lire le fichier. En effet, on initialise un Buffered Reader prenant en paramètre  le fichier. On utilise la méthode readline() et tant que la ligne n’est pas vide on l’ajoute récursivement dans l’ArrayList.

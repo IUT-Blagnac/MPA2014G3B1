@@ -1,0 +1,69 @@
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+@startuml
+'-----------------------------------
+title <b>OPTI</b> class diagram
+
+class OPTI {
+	Onglets
+	saveEtu
+	saveInt
+	savePro
+	saveSuj
+	listEtudiants
+	listProject
+	listSujet
+	listIntervenant
+	listGroupe
+	listTmp
+	OPTI()
+	barreDeMenu()
+	panneauDeContenu()
+	quitter()
+	afficherAPropos()
+	toChaine()
+	enregistrer()
+	ouvrir()
+	ajouter()
+	modifier()
+	supprimer()
+	enregistrerTout()
+	ouvrirTout()
+	Onglets()
+}
+
+class APropos {
+}
+
+class CadreEtudiant {
+	modif
+	panneauDeContenu()
+}
+
+class CadreIntervenant {
+	modif
+	panneauDeContenu()
+}
+
+class CadreProjet {
+	modif
+	panneauDeContenu()
+}
+
+class CadreSujet {
+	modif
+	panneauDeContenu()
+}
+
+OPTI "1" --> "1" APropos
+OPTI "1" --> "1" CadreEtudiant
+OPTI "1" --> "1" CadreIntervenant
+OPTI "1" --> "1" CadreProjet
+OPTI "1" --> "1" CadreSujet
+
+
+'-----------------------------------
+@enduml
+'-----------------------------------

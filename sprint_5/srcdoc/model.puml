@@ -1,0 +1,67 @@
+'-----------------------------------
+' UML OPTI Project
+' MPA 2014
+'-----------------------------------
+@startuml
+'-----------------------------------
+title <b>OPTI</b> class diagram
+
+class Etudiant {
+	prenom
+	nom
+}
+
+class Groupe {
+	libelle
+}
+
+Etudiant "1..*" --> "1" Groupe
+
+class Sujet {
+	id
+	nom
+	titre
+	{static} nbreSujets
+}
+
+class Projet {
+}
+
+Projet "1" o--> "1" Groupe
+Projet "1" o--> "1" Sujet
+
+Groupe "*" -- "0..nbreSujets" Sujet
+(Groupe,Sujet) ..Voeu
+
+class Voeu {
+	numero
+}
+
+class Intervenant {
+	prenom
+	nom
+}
+
+Intervenant "*" -- "*" Projet
+(Intervenant,Projet) ..Encadrer
+
+enum Role <<enum>> {
+	Superviseur
+	Client
+	Support_Technique
+}
+
+class Encadrer {
+	role : Role
+}
+
+Encadrer ..> Role
+
+note "<b>Regle OCL</b> : 1 seul client, 1 seul superviseur \net 1 seul support technique" as OCL1
+note "<b>Regle OCL</b> : le client ne peut etre superviseur \ndu meme projet" as OCL2
+
+Role .. OCL1
+Role .. OCL2
+'-----------------------------------
+@enduml
+'-----------------------------------

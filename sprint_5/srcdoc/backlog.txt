@@ -1,0 +1,98 @@
+﻿== Fonctionnalités client (Backlog produit) V0
+
+Les fonctionnalités initiales demandées sont les suivantes :
+
+. Liste des sujets de projet tutoré de l'année
+.. Créer/Supprimer/Modifier un sujet
+.. Liste numérotée suite
+
+. Voeux des groupes d'étudiants 
+.. Définir des groupes d'étudiants 
+.. Associer des étudiants à des groupes 
+.. Définir les voeux d’un groupe 
+.. etc
+
+. Affectation des projets aux groupes d'étudiants 
+.. Définir (affectation) un sujet pour un groupe
+.. Lister le nombre de voeux par rang pour un sujet
+.. Lister pour un groupe le nombre de "concurents" par rang de voeux
+.. Lister les projets affectés/non affectés
+.. Lister les groupes affectés/non affectés
+.. Calcul automatique de pré-affectation "au mieux" sur un ensemble de groupes non affectés
+.. etc
+
+. Affectation des intervenants sur chaque projet tutoré
+.. Définir les intervenants d’un projet tutoré
+.. Lister les projets par intervenant
+.. Lister les intervenants par projet 
+.. etc
+
+== Fonctionnalités client (Backlog produit) V1
+
+. Manipulation des données brutes
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des étudiants du fichier etudiants2014_2015.csv dans l’IHM
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des intervenants du fichier intervenants2014_2015.csv dans l’IHM
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des sujets du fichier sujets2014_2015.csv dans l’IHM
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des projets du fichier projets2014_2015.csv dans l’IHM
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des étudiants ou des intervenants ou des sujets ou des projets d’un fichier .csv dans l’IHM, en supprimer certains puis l’enregistrer dans un fichier .csv de mon choix
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des étudiants puis ajouter un nouvel étudiant et sauvegarder la liste des étudiants dans un fichier .csv de mon choix
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des intervenants puis ajouter un nouvel intervenant et sauvegarder la liste des intervenants dans un fichier .csv de mon choix
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des sujets puis ajouter un nouveau sujet et sauvegarder la liste des projets dans un fichier .csv de mon choix
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des projets puis ajouter un nouveau projet et sauvegarder la liste des projets dans un fichier .csv de mon choix
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des projets puis cloner n’importe quel projet, l'éditer et sauvegarder la liste des projets dans un fichier .csv de mon choix
+.. En tant qu’administrateur, une fois la liste des étudiants ou des intervenants ou des sujets ou des projets affichée dans l’IHM, je veux pouvoir sélectionner (filtrer) les éléments affichés sur chacun des champs du fichier .csv correspondant
+
+. Affichage des données croisées
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des groupes indiquant le projet, le sujet, les étudiants et l’ensemble des intervenants du projet dans l’IHM
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des étudiants indiquant le groupe, le sujet, le projet et l’ensemble des intervenants du projet dans l’IHM
+.. En tant qu’administrateur, je veux pouvoir afficher dans l’IHM la liste des intervenants indiquant pour chaque projet, le sujet, le rôle, le groupe et le projet
+
+== Fonctionnalités client (Backlog produit) V2
+
+. Manipulation des données brutes
+.. En tant qu’administrateur, je veux pouvoir saisir les voeux de chaque groupe d'étudiants (rappel: chaque groupe classe tous les sujets de 1 à nombreDeSujets)
+
+. Affichage des données croisées
+.. En tant qu’administrateur, je veux pouvoir sélectionner un numéro de voeux X et afficher tous les sujets sélectionnés en voeux numéro X
+.. En tant qu’administrateur, je veux pouvoir sélectionner un sujet et voir tous les groupes sans sujet qui l’ont sélectionné en voeux numéro 1, tous les groupes sans sujet qui l’ont sélectionné en voeux numéro 2, tous les groupes sans sujet qui l’ont sélectionné en voeux numéro 3, … , tous les groupes sans sujet qui l’ont sélectionné en voeux numéro nombreDeSujets
+.. En tant qu’administrateur, je veux pouvoir pour tous les sujets, voir combien de groupes l’ont choisi en voeux 1, combien de groupes l’ont choisi en voeux 2, …, combien de groupe l’ont choisi en voeux nombreDeSujets mais sans compter les groupes ayant déjà un projet (sujet affecté)
+.. En tant qu’administrateur, je veux pouvoir afficher la liste des groupes avec pour chaque groupe le sujet qui leur est affecté (s’il existe) et le numéro de voeux correspondant, ainsi que les intervenants affectés s’il y en a (superviseur, support technique ou rapporteur)
+
+. Affectation des sujets et des intervenants
+.. En tant qu’administrateur, je veux pouvoir sélectionner un sujet et un groupe pour créer un nouveau projet
+.. En tant qu’administrateur, je veux pouvoir pré-affecter les groupes aux sujets en minimisant le rang du voeu choisi pour chaque groupe
+.. En tant qu’administrateur, je veux pouvoir affecter tout intervenant à un projet et lui assigner un rôle (superviseur, support technique ou rapporteur) dans le projet
+
+
+
+
+
+
+== Fonctionnalités client (Backlog Produit) V3
+
+Toutes les fonctionnalités de la version V2, auxquelles s’ajoutent …
+
+. Application de consultation web
+.. En tant qu’internaute, je veux accéder à l’application OPTIweb.html depuis tout support fixe ou mobile
+.. En tant qu’internaute, je veux pouvoir consulter les projets, les sujets, les étudiants et les intervenants dans des pages séparées
+.. En tant qu’internaute, je veux pouvoir consulter le nom des développeurs de l’application, le nom du Product Owner ainsi que les technologies utilisées
+
+. Page Projets
+.. En tant qu’internaute, je veux pour chaque projet en voir le nom, le titre, le client, le superviseur, le groupe et les étudiants réalisant le projet
+.. En tant qu’internaute, je veux pouvoir rechercher un projet dans la liste des projets en fournissant une chaine de caractère quelconque
+
+. Page Sujets
+.. En tant qu’internaute, je veux pour chaque sujet en voir le nom, le titre et le ou les noms des groupes d'étudiants réalisant le sujet
+.. En tant qu’internaute, je veux pouvoir rechercher un sujet dans la liste des sujets en fournissant une chaine de caractère quelconque
+.. En tant qu’internaute, je veux pouvoir sélectionner un sujet et voir les projets réalisant le sujet
+
+. Page Etudiants
+.. En tant qu’internaute, je veux pour chaque étudiant en voir le nom, le prénom ainsi que son groupe
+.. En tant qu’internaute, je veux pouvoir rechercher un étudiant dans la liste des étudiants en fournissant une chaine de caractère quelconque
+.. En tant qu’internaute, je veux pouvoir sélectionner un étudiant et voir le projet qu’il réalise
+
+. Page Intervenants
+.. En tant qu’internaute, je veux pour chaque intervenant en voir le nom, le prénom ainsi que le nombre de ses interventions en tant que Client ou Superviseur
+.. En tant qu’internaute, je veux pouvoir rechercher un intervenant dans la liste des intervenants en fournissant une chaine de caractère quelconque
+.. En tant qu’internaute, je veux pouvoir sélectionner un intervenant et voir le(s) projet(s) où il intervient
+
