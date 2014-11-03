@@ -43,4 +43,8 @@ script:
   - cd ./OPTIweb/test
   - cp ../OPTIweb.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
-    - casperjs test casperSujets.js
+  - casperjs test casperSujets.js
+  - casperjs test casperProjets.js
+  - casperjs test casperCredits.js
+  - casperjs test casperEtudiants.js
+  - casperjs test casperIntervenant.js

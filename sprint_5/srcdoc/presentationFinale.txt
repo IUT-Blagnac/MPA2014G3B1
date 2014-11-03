@@ -1,0 +1,130 @@
+﻿== Projet OPTIweb : Documentation SPRINT_5 
+:Author:  Groupe projet 3B1
+:doctitle: Projet OPTIweb : Présentation finale de recette
+:slideshowlocation: Your computer
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by AsciiDoc and W3C Slidy &#169; 
+:revnumber: 4
+
+include::docConf.txt[]
+
+== Bilan fonctionnel du projet
+
+*Page d'accueil*
+
+Voici la page d'accueil que nous avons conçut, il y a le bouton pour accéder aux crédits, 
+un pour accéder aux projets, 
+un autre pour les sujets, 
+puis un pour les étudiants, 
+et enfin un dernier pour les intervenants.
+
+
+image::accueil.png[]
+
+
+*Page des crédits*
+
+Dans cette page de credits il y a la présentation des producteurs, 
+des membres de l'équipe enseignante,
+et enfin les propulseurs.
+De plus on peut accéder aux pages des propulseurs en cliquant dessus.
+Il y a bouton de retour en arrière.
+
+
+image::credits.png[]
+
+
+*Page des projets*
+
+Ici nous avons exposer la liste des projets éxistants. 
+Avec une fonction de recherche sur tout les mots de la page.
+Il y a bouton de retour en arrière.
+
+
+image::projets.png[]
+
+
+*Page des sujets*
+
+Là nous avons afficher la liste des sujets, en cliquant sur l'un d'entre eux, on accède a la page des projets.
+Avec une fonction de recherche sur tout les mots de la page.
+Il y a bouton de retour en arrière.
+
+
+image::sujets.png[]
+
+
+*Page des etudiants*
+
+Dans la page des étudiants la liste est affichée, et lorsqu'on appuye sur un, on accède a la page des projets.
+Avec une fonction de recherche sur tout les mots de la page.
+Il y a bouton de retour en arrière.
+
+
+image::etudiants.png[]
+
+
+*Page des intervenants*
+
+Voici la page des intervenants que nous avons conçut, lorsqu'on appuye sur un, on accède a la page des projets.
+Avec une fonction de recherche sur tout les mots de la page.
+Il y a bouton de retour en arrière.
+
+
+image::intervenants.png[]
+
+
+== Bilan financier du projet
+
+- nb séances totales: 31
+
+- nb heures/personne: 31 * 1.5 = 46.5
+
+- nb heures Totales: 279h
+
+- nb jours Total: 11,625j
+
+== Bilan technique du projet
+
+*Modèles d’analyse et de conception utilisés*
+
+*Default :*
+
+
+image::default.png[]
+
+
+*Modèle :*
+
+
+image::Model.png[]
+
+
+*Algorithmes complexes implémentés*
+
+- Ouvrir un fichier CSV
+
+- Enregistrer dans un fichier CSV
+
+- Fonction Lire dans la Librairie CSV
+
+- Fonction écrire dans la Librairie CSV
+
+- Gestion des données via des onglets
+
+== Bilan humain du projet
+
+- Bonne entente
+
+- Répartition des postes
+
+- Entraide en cas de problèmes
+
+== Bilan global du projet
+
+- Répartission des tâches par le scrum master en fonction des goûts
+
+- Entraide en cas de problèmes
+
+- Retour en arrière si besoin
+
+- Choix des modules en fonction des goûts
