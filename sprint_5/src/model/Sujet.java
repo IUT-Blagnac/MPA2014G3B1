@@ -1,12 +1,12 @@
 package model;
-
 public class Sujet extends AbstractList {
+	
 
 	public String idSujet;
 	public String nomSujet;
 	public String titreSujet;
 	
-	public Sujet(String pIdSujet, String pNomSujet, String pTitreSujet)
+	public Sujet(String pIdSujet, String pTitreSujet , String pNomSujet)
 	{
 		this.idSujet = pIdSujet;
 		this.nomSujet = pNomSujet;

@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import model.AbstractList;
 import model.EtuHTML;
 import model.Etudiants;
+import model.Intervenant;
+import model.IntervenantHTML;
+import model.Sujet;
+import model.SujetHTML;
 
 
 abstract class Transform {
@@ -32,15 +36,89 @@ abstract class Transform {
 	public static String ETUtoHTML ( ArrayList<Etudiants> listEtu)
 	{
 		EtuHTML tmp;
-		String bb =  (new EtuHTML()).toString();
+		String chaine = ""; // (new EtuHTML()).toString();
 		
-		for(int i =0; i< listEtu.size(); i++)
+		chaine = (new EtuHTML()).toString();
+
+		for(int i = 1; i< listEtu.size(); i++)
 		{
 			tmp = new EtuHTML(listEtu.get(i));
-			bb = bb + tmp.toString();
+			chaine = chaine + tmp.toString();
 		}
 		
-		return bb;
+		return chaine;
+		
+	}
+	
+	// Convertit un CSV en ArrayList d'étudiant
+	public static ArrayList<Sujet> CSVtoSujet ( String file) throws IOException
+	{
+		ArrayList<String []> ListSujetS = lire( file);
+		ArrayList<Sujet> ListSujet = new ArrayList<>();
+		
+		for(int i=0; i<ListSujetS.size(); i++)
+		{
+			ListSujet.add( new Sujet(ListSujetS.get(i)[0], ListSujetS.get(i)[1], ListSujetS.get(i)[2]) );
+		}
+		
+		return ListSujet;
+	}
+	
+	
+
+	// Convertit un CSV en ArrayList d'étudiant
+	public static String SUJETtoHTML ( ArrayList<Sujet> listSujet)
+	{
+		SujetHTML tmp;
+		String chaine = ""; // (new SujetHTML()).toString();
+		
+		chaine = "" + (new SujetHTML()).toString();
+		for(int i = 1; i< listSujet.size(); i++)
+		{
+			tmp = new SujetHTML(listSujet.get(i));
+			chaine = chaine + tmp.toString();
+
+		}
+		
+		
+		return chaine;
+		
+	}
+	
+	// Convertit un CSV en ArrayList d'intervenant
+	public static ArrayList<Intervenant> CSVtoSIntervenant ( String file) throws IOException
+	{
+		ArrayList<String []> ListInterS = lire( file);
+		ArrayList<Intervenant> ListInter = new ArrayList<>();
+		
+		for(int i=0; i<ListInterS.size(); i++)
+		{
+			ListInter.add( new Intervenant(ListInterS.get(i)[0], ListInterS.get(i)[1]) );
+		}
+		
+		return ListInter;
+	}
+	
+	
+
+	// Convertit un CSV en ArrayList d'étudiant
+	public static String INTERtoHTML ( ArrayList<Intervenant> ListInter)
+	{
+		IntervenantHTML tmp;
+		String chaine = ""; // (new SujetHTML()).toString();
+		
+		chaine = "" + (new IntervenantHTML()).toString();
+		for(int i = 1; i< ListInter.size(); i++)
+		{
+
+			System.out.println(new IntervenantHTML(ListInter.get(i)).toString());
+			tmp = new IntervenantHTML(ListInter.get(i));
+			chaine = chaine + tmp.toString();
+
+		}
+		
+		
+		return chaine;
 		
 	}
 	

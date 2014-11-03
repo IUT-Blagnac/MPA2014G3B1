@@ -197,22 +197,23 @@ public class MakeOPTIweb {
 		}
 
 		// écriture des sujets
-		//printS.write() ;
+		printS.write( Transform.SUJETtoHTML(Transform.CSVtoSujet("./data/sujets2014_2015.csv")).getBytes()) ;
 		for (String s : suite1) {
 			printS.write((s + "\n").getBytes()) ;
 		}
 
 		// écriture des étudiants
-		printS.write(Transform.ETUtoHTML(Transform.CSVtoETU("./data/etudiants2014_2015.csv")).getBytes() ) ;
+		printS.write( Transform.ETUtoHTML(Transform.CSVtoETU("./data/etudiants2014_2015.csv")).getBytes() ) ;
 		for (String s : suite2) {
 			printS.write((s + "\n").getBytes()) ;
 		}
 
 
 		// écriture des intervenant et fin
-		//printS.write() ;
+		printS.write( Transform.INTERtoHTML(Transform.CSVtoSIntervenant("./data/intervenants2014_2015.csv")).getBytes() ) ;
 		for (String s : fin) {
 			printS.write((s + "\n").getBytes()) ;
 		}
+
 	}
 }

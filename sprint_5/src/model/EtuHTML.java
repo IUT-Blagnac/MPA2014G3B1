@@ -8,7 +8,7 @@ public class EtuHTML {
 	String nom;
 	String prenom;
 	String span; //balise <span class="ui-li-count" title="Groupe">
-	String groupe; //Groupe n°groupe
+	String groupe; //Groupe ngroupe
 	String Fspan; //</span>
 	String Fa; //</a>
 	String Fli; //</li>
@@ -19,7 +19,7 @@ public class EtuHTML {
 		li = "<li data-find=\"" + etu.getPrenom() + " " + etu.getNom() + "\">";
 		a = "<a href=\"#projets\">";
 		nom = etu.getNom();
-		prenom = etu.getPrenom();
+		prenom = " " + etu.getPrenom();
 		span = "<span class=\"ui-li-count\" title=\"Groupe\">";
 		groupe = "Groupe " + etu.getGrProjet();
 		Fspan = "</span>";
@@ -30,9 +30,9 @@ public class EtuHTML {
 	
 	public EtuHTML()
 	{
-		li = "<li data-find=\"" + "list-divider" + "\">";
+		li = "<li data-role=\"" + "list-divider" + "\">";
 		a = "";
-		nom = " Etudiant";
+		nom = "Etudiant";
 		prenom = "";	
 		span = "<span class=\"ui-li-count\" title=\"Groupe\" style=\"right: 40px !important;\">";
 		groupe = "Groupe";

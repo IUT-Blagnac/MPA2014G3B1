@@ -22,21 +22,42 @@ public class SujetHTML {
 	
 	public SujetHTML(Sujet sujet)
 	{
-		li = "balise <li data-find=\"" + sujet.getTitreSujet() + ">";
+		li = "<li data-find=\"" + "[" + sujet.getTitreSujet() + "]\"" + ">";
+		//li = "<li data-find=\"" + "[" + sujet.getNomSujet() + "]" + ">";
 		a = "<a href=\"#projets\">";
-		titre = sujet.getTitreSujet() + " ";
-		br = "</br>";
+		titre = "[" + sujet.getTitreSujet() + "]" + " ";
+		br = "<br/>";
 		div = "<div style=\"white-space:normal;\">";
 		span = "<span>";
 		b = "<b>";
 		nomSujet = sujet.getNomSujet();
-		Fb = "<\b>";
+		Fb = "</b>";
 		Fspan = "</span>";
 		span2 = "</span><span class=\"ui-li-count\">";
 		nGr = "NO";
 		Fspan2 = "</span>";
 		Fdiv ="</div>";
 		Fa = "</a>";
+		Fli = "</li>";
+	}
+	
+	public SujetHTML ()
+	{
+		li = "<li data-role=\"list-divider\">" ;
+		a = "";
+		titre = "Sujet";
+		br = "";
+		div = "";
+		span = "";
+		b = "";
+		nomSujet = "";
+		Fb = "";
+		Fspan = "<span class=\"ui-li-count\" title=\"Groupe\" style=\"right: 40px !important;\">";
+		span2 = "";
+		nGr = "Groupe";
+		Fspan2 = "</span>";
+		Fdiv ="";
+		Fa = "";
 		Fli = "</li>";
 	}
 	public String toString()
