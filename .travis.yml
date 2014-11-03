@@ -33,6 +33,6 @@ script:
   - python ./tools/asciidoc-8.6.9/asciidoc.py -a iconsdir=../tools/asciidoc-8.6.9/images -o ./doc/docTechnique.html ./srcdoc/docTechnique.txt
   - ls -alF doc
   
-  - cd ../OPTIweb/test
+  - cd ./OPTIweb/test
   - cp OPTIwebprof.html /tmp/OPTIweb.html
   - casperjs test casperAccueil.js
