@@ -10,7 +10,7 @@ public class EtuHTML {
 	String nom;
 	String prenom;
 	String span; //balise <span class="ui-li-count" title="Groupe">
-	String groupe; //Groupe n°groupe
+	String groupe; //Groupe ngroupe
 	String Fspan; //</span>
 	String Fa; //</a>
 	String Fli; //</li>
